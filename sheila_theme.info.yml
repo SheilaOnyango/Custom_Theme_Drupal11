@@ -1,0 +1,14 @@
+name: "sheila"
+type: theme
+description: "A custom theme for Sheila"
+base theme: false
+version: 0.0.1
+core_version_requirement: ^10 || ^11
+libraries:
+  - sheila_theme/global
+regions:
+  header: "Header"
+  menu: "Menu"
+  content: "Content"
+  sidebar: "Sidebar"
+  footer: "Footer"

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    {{ attach_library('sheila_theme/global') }}
+    {{ head }}
+    {{ styles }}
+    {{ scripts }}
+  </head>
+  <body>
+    <header id="header">
+      {% if page.header %}
+        {{ page.header }}
+      {% endif %}
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h1>My Drupal Custom Theme!</h1>
+      <p>Hey! Welcome to Sheila's theme</p>
+      <a href="/about" class="custom-button">Learn More</a>
+    </div>
+
+    <main role="main">
+      <div class="content">
+        {{ page.content }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ "now"|date("Y") }} Sheila's Theme</p>
+    </footer>
+  </body>
+</html>
